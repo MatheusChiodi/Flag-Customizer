@@ -1,6 +1,7 @@
 import { Image } from "lucide-react";
 import React, { useState } from "react";
 import PhotoCropper from "./PhotoCropper";
+import CustomFileInput from "./CustomFileInput";
 
 function PhotoUploader({ setPhoto }) {
   const [tempImage, setTempImage] = useState(null);
@@ -23,15 +24,10 @@ function PhotoUploader({ setPhoto }) {
 
   return (
     <div className="rounded-lg bg-gray-800 p-6 text-white shadow-xl">
-      <label className="text-dracula-foreground mb-3 block flex items-center gap-2 text-xl font-semibold">
+      <label className="mb-3 block flex items-center gap-2 text-xl font-semibold text-dracula-foreground">
         <Image color="#ff5555" /> Selecione sua foto:
       </label>
-      <input
-        type="file"
-        accept="image/*"
-        onChange={handleFileChange}
-        className="file:bg-dracula-currentLine hover:file:bg-dracula-red block w-full text-sm text-gray-500 file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white file:transition-all file:duration-500"
-      />
+      <CustomFileInput handleFileChange={handleFileChange} />
       {tempImage && (
         <PhotoCropper
           image={tempImage}

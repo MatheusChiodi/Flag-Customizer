@@ -26,7 +26,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
       transition={{ duration: 0.5 }}
     >
       <motion.h2
-        className="text-dracula-foreground mb-4 flex items-center gap-2 text-2xl font-bold"
+        className="mb-4 flex items-center gap-2 text-2xl font-bold text-dracula-foreground"
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.5 }}
@@ -53,7 +53,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <label className="text-dracula-foreground mb-1 block text-lg">
+          <label className="mb-1 block text-lg text-dracula-foreground">
             Cor da Flag:
           </label>
           <input
@@ -71,7 +71,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <label className="text-dracula-foreground mb-1 block text-lg">
+          <label className="mb-1 block text-lg text-dracula-foreground">
             Cor do Texto:
           </label>
           <input
@@ -90,7 +90,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
-        <label className="text-dracula-foreground mb-1 block text-lg">
+        <label className="mb-1 block text-lg text-dracula-foreground">
           Texto da Flag:
         </label>
         <input
@@ -99,7 +99,15 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           value={flagOptions.text}
           onChange={handleTextChange}
           maxLength={MAX_CHARACTERS}
-          className="focus:ring-dracula-red w-full rounded border p-2 text-gray-900 shadow-lg focus:outline-none focus:ring-2"
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck={false}
+          inputMode="none"
+          onCopy={(e) => e.preventDefault()}
+          onPaste={(e) => e.preventDefault()}
+          onCut={(e) => e.preventDefault()}
+          className="w-full rounded border p-2 text-gray-900 shadow-lg focus:outline-none focus:ring-2 focus:ring-dracula-red"
+          placeholder="Digite o texto da bandeira"
         />
       </motion.div>
 
@@ -109,14 +117,14 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.4 }}
       >
-        <label className="text-dracula-foreground mb-1 block text-lg">
+        <label className="mb-1 block text-lg text-dracula-foreground">
           Formato da Imagem:
         </label>
         <select
           name="shape"
           value={flagOptions.shape}
           onChange={handleChange}
-          className="focus:ring-dracula-red w-full rounded border p-2 text-gray-900 focus:outline-none focus:ring-2"
+          className="w-full rounded border p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-dracula-red"
         >
           <option value="round">Redondo</option>
           <option value="square">Quadrado</option>

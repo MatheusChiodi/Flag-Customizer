@@ -44,9 +44,7 @@ function PhotoCropper({ image, onCropComplete, onCancel }) {
             onCropComplete={handleCropComplete}
           />
 
-          {/* Painel de controle */}
           <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-3 bg-gray-800/80 p-4 backdrop-blur-md">
-            {/* Controle de zoom */}
             <div className="flex items-center gap-3">
               <span className="text-sm text-white">Zoom</span>
               <input
@@ -60,7 +58,6 @@ function PhotoCropper({ image, onCropComplete, onCancel }) {
               />
             </div>
 
-            {/* Botões */}
             <div className="flex justify-between gap-2">
               <motion.button
                 whileTap={{ scale: 0.95 }}
