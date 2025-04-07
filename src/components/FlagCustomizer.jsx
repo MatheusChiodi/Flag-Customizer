@@ -102,7 +102,6 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           autoComplete="off"
           autoCorrect="off"
           spellCheck={false}
-          inputMode="none"
           onCopy={(e) => e.preventDefault()}
           onPaste={(e) => e.preventDefault()}
           onCut={(e) => e.preventDefault()}
