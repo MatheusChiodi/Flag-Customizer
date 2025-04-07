@@ -38,7 +38,7 @@ function CustomFileInput({ handleFileChange }) {
         <label className="block w-full sm:w-auto">
           <input
             type="file"
-            accept="image/*"
+            accept=".png,.jpg,.jpeg"
             onChange={onChange}
             className="hidden"
             id="customFileInput"
