@@ -9,7 +9,7 @@ export default function RoundFlag({
   text,
   textColor,
 }) {
-  const [size, setSize] = useState(300);
+  const [size, setSize] = useState(280);
   const containerRef = useRef(null);
 
   useEffect(() => {
