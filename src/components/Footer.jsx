@@ -7,13 +7,13 @@ function Footer() {
         <p className="text-md text-gray-400">
           © 2025 - Todos os direitos reservados
         </p>
-        <p className="text-md text-gray-400 mx-3  hidden md:block">|</p>
+        <p className="text-md mx-3 hidden text-gray-400 md:block">|</p>
         <p className="text-md text-gray-400">
           Desenvolvido por
           <a
             href="https://matheuschiodi.github.io/Portfolio/"
             target="_blank"
-            className="text-dracula-red hover:text-dracula-red/80 mx-1 font-semibold"
+            className="mx-1 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text font-semibold text-transparent hover:text-dracula-red/80"
             rel="noopener noreferrer"
           >
             Matheus Chiodi
