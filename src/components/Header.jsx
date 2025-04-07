@@ -19,7 +19,7 @@ function Header() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="fixed left-[1%] top-0 z-50 w-[98%] overflow-hidden"
       >
-        <div className="mx-auto rounded-b-2xl border-b border-white/10 bg-gray-800 text-white shadow-xl">
+        <div className="mx-auto max-w-[1920px] rounded-b-2xl border-b border-white/10 bg-gray-800 text-white shadow-xl">
           <div className="flex h-16 items-center justify-between px-4 md:px-10">
             <div className="flex items-center gap-2">
               <img

@@ -17,11 +17,12 @@ function App() {
   });
 
   return (
-    <div className="mx-auto max-w-[1920px] bg-gray-100 px-3 text-gray-900 lg:min-h-screen">
+    <div className="mx-auto max-w-[1920px] bg-gray-100 px-3 text-gray-900 lg:min-h-screen flex flex-col justify-between">
       <Header />
+      <div className="h-[95px] w-full"></div>
       
-      <motion.main
-        className="mx-auto px-3 pb-3 pt-[95px]"
+      <motion.div
+        className="mx-auto px-3 pb-3 w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -49,7 +50,7 @@ function App() {
             <Preview photo={photo} flagOptions={flagOptions} />
           </motion.div>
         </div>
-      </motion.main>
+      </motion.div>
 
       <Footer />
     </div>
