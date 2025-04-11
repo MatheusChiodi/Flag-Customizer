@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import Header from "./components/Header";
 import PhotoUploader from "./components/PhotoUploader";
@@ -7,22 +8,32 @@ import Preview from "./components/Preview";
 import Footer from "./components/Footer";
 
 function App() {
+  const { t } = useTranslation();
   const [photo, setPhoto] = useState(null);
   const [flagOptions, setFlagOptions] = useState({
     color: "#FF5555",
     textColor: "#FFFFFF",
-    text: "#SeuTexto",
+    text: t("yourText"),
     position: "around",
     shape: "round",
   });
 
+  useEffect(() => {
+    if (flagOptions.text === "#Seutexto" || flagOptions.text === "#YourText") {
+      setFlagOptions((prev) => ({
+        ...prev,
+        text: t("yourText"),
+      }));
+    }
+  }, [t, flagOptions.text]);
+
   return (
-    <div className="mx-auto max-w-[1920px] bg-gray-100 px-3 text-gray-900 lg:min-h-screen flex flex-col justify-between">
+    <div className="mx-auto flex max-w-[1920px] flex-col justify-between bg-gray-100 px-3 text-gray-900 lg:min-h-screen">
       <Header />
       <div className="h-[95px] w-full"></div>
-      
+
       <motion.div
-        className="mx-auto px-3 pb-3 w-full"
+        className="mx-auto w-full px-3 pb-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
