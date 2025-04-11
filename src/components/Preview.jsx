@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from "framer-motion";
 import RoundFlag from "./RoundFlag";
 import SquareFlag from "./SquareFlag";
 
 function Preview({ photo, flagOptions }) {
+  const { t } = useTranslation();
   return (
     <div className="flex h-full w-full items-center justify-center rounded-lg bg-gray-800 py-6 px-4 shadow-xl">
       <AnimatePresence mode="wait">
@@ -55,7 +57,9 @@ function Preview({ photo, flagOptions }) {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.4 }}
           >
-            <p className="text-lg text-center">Carregue uma foto para ver a prévia</p>
+            <p className="text-lg text-center">
+              {t("Preview.title")}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

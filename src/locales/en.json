@@ -1,0 +1,36 @@
+{
+  "Header": {
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "Contact": {
+    "title": "Contact"
+  },
+  "CustomFileInput": {
+    "toChoose": "Choose Image",
+    "toReplace": "Replace Image",
+    "noImage": "No image selected",
+    "alert": "Please select an image file."
+  },
+  "FlagCustomizer": {
+    "title": "Customize Flag",
+    "flagColors": "Flag Color",
+    "textColor": "Text Color",
+    "flagText": "Flag Text",
+    "placeholderFlagText": "Enter flag text",
+    "imageFormat": "Image Format",
+    "optionRound": "Round",
+    "optionSquare": "Square"
+  },
+  "Footer": {
+    "rights": "All rights reserved",
+    "DevelopedBy": "Developed by"
+  },
+  "PhotoCropper": {
+    "crop": "Crop",
+    "cancel": "Cancel"
+  },
+  "Preview": {
+    "title": "Upload a photo to see the preview"
+  }
+}

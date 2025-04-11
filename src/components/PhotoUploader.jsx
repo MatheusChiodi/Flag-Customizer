@@ -1,9 +1,11 @@
-import { Image } from "lucide-react";
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import { Image } from "lucide-react";
 import PhotoCropper from "./PhotoCropper";
 import CustomFileInput from "./CustomFileInput";
 
 function PhotoUploader({ setPhoto }) {
+  const { t } = useTranslation();
   const [tempImage, setTempImage] = useState(null);
 
   const handleFileChange = (e) => {

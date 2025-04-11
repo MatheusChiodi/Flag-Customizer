@@ -1,15 +1,17 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="mt-5 rounded-t-lg bg-gray-800 text-white shadow-xl">
       <div className="flex flex-wrap items-center justify-center gap-4 py-4 md:gap-0">
         <p className="text-md text-gray-400">
-          © 2025 - Todos os direitos reservados
+          © 2025 - {t("Footer.rights")}
         </p>
         <p className="text-md mx-3 hidden text-gray-400 md:block">|</p>
         <p className="text-md text-gray-400">
-          Desenvolvido por
+          {t("Footer.DevelopedBy")}{" "}
           <a
             href="https://matheuschiodi.github.io/Portfolio/"
             target="_blank"

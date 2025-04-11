@@ -13,10 +13,12 @@
     "framer-motion": "^12.6.3",
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
+    "i18next": "^24.2.3",
     "lucide-react": "^0.484.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-easy-crop": "^5.4.1"
+    "react-easy-crop": "^5.4.1",
+    "react-i18next": "^15.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

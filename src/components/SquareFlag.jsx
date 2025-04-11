@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { toPng } from "html-to-image";
 import { Download } from "lucide-react";
 import { motion } from "framer-motion";
@@ -9,8 +10,8 @@ export default function RoundFlag({
   text,
   textColor,
 }) {
+  const { t } = useTranslation();
   const size = 300;
-
   const containerRef = useRef(null);
 
   const handleDownload = () => {
@@ -71,10 +72,10 @@ export default function RoundFlag({
       </motion.div>
       <button
         onClick={handleDownload}
-        className="bg-dracula-currentLine hover:bg-dracula-red flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2 text-white transition"
+        className="flex w-full items-center justify-center gap-2 rounded-lg bg-dracula-currentLine px-4 py-2 text-white transition hover:bg-dracula-red"
       >
         <Download color="#fff" />
-        Baixar imagem
+        {t("download")}
       </button>
     </div>
   );

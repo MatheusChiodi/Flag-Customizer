@@ -1,9 +1,11 @@
 import React, { useState, useCallback } from "react";
+import { useTranslation } from 'react-i18next';
 import Cropper from "react-easy-crop";
 import { getCroppedImg } from "../utils/cropImage";
 import { motion, AnimatePresence } from "framer-motion";
 
 function PhotoCropper({ image, onCropComplete, onCancel }) {
+  const { t } = useTranslation();
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
@@ -65,7 +67,7 @@ function PhotoCropper({ image, onCropComplete, onCancel }) {
                 onClick={onCancel}
                 className="flex-1 rounded-xl bg-red-500 px-4 py-2 font-medium text-white shadow-md transition hover:bg-red-600"
               >
-                Cancelar
+                {t("PhotoCropper.cancel")}
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -73,7 +75,7 @@ function PhotoCropper({ image, onCropComplete, onCancel }) {
                 onClick={handleConfirm}
                 className="flex-1 rounded-xl bg-green-500 px-4 py-2 font-medium text-white shadow-md transition hover:bg-green-600"
               >
-                Recortar
+                {t("PhotoCropper.crop")}
               </motion.button>
             </div>
           </div>

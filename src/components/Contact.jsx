@@ -1,10 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { AtSign, Github, Linkedin, Youtube, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = ({ setIsOpenContact }) => {
   const handleClose = () => {
     setIsOpenContact(false);
   };
+
+  const { t } = useTranslation();
 
   return (
     <AnimatePresence>
@@ -27,7 +30,7 @@ const Contact = ({ setIsOpenContact }) => {
           {/* Header */}
           <div className="flex justify-between items-center p-4 bg-gray-800 text-gray-300">
             <h1 className="text-[22px] font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
-              Contato
+              {t('Contact.title')}
             </h1>
             <button onClick={handleClose} aria-label="Fechar">
               <X

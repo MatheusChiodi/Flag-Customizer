@@ -1,0 +1,38 @@
+{
+  "Header": {
+    "contact": "Contato",
+    "language": "Idioma"
+  },
+  "Contact": {
+    "title": "Contato"
+  },
+  "CustomFileInput": {
+    "toChoose": "Escolher imagem",
+    "toReplace": "Trocar imagem",
+    "noImage": "Nenhuma imagem selecionada",
+    "alert": "Por favor, selecione um arquivo de imagem."
+  },
+  "FlagCustomizer": {
+    "title": "Customizar bandeira",
+    "flagColors": "Cor da bandeira",
+    "textColor": "Cor do texto",
+    "flagText": "Texto da bandeira",
+    "placeholderFlagText": "Digite o texto da bandeira",
+    "imageFormat": "Formato da imagem",
+    "optionRound": "Redondo",
+    "optionSquare": "Quadrado"
+  },
+  "Footer": {
+    "rights": "Todos os direitos reservados",
+    "DevelopedBy": "Desenvolvido por"
+  },
+  "PhotoCropper": {
+    "crop": "Recortar",
+    "cancel": "Cancelar"
+  },
+  "Preview": {
+    "title": "Carregue uma foto para ver a prévia"
+  },
+  "download": "Baixar imagem"
+
+}

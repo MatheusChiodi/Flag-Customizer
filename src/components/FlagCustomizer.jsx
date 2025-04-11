@@ -1,9 +1,11 @@
-import { Flag } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { Flag } from "lucide-react";
 import { motion } from "framer-motion";
 
 function FlagCustomizer({ flagOptions, setFlagOptions }) {
   const MAX_CHARACTERS = 35;
+  const { t } = useTranslation();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +33,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <Flag color="#ff5555" /> Customizar Flag
+        <Flag color="#ff5555" /> {t("FlagCustomizer.title")}
       </motion.h2>
 
       <motion.div
@@ -54,7 +56,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           }}
         >
           <label className="mb-1 block text-lg text-dracula-foreground">
-            Cor da Flag:
+            {t("FlagCustomizer.flagColors")} : 
           </label>
           <input
             type="color"
@@ -72,7 +74,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           }}
         >
           <label className="mb-1 block text-lg text-dracula-foreground">
-            Cor do Texto:
+            {t("FlagCustomizer.textColor")} : 
           </label>
           <input
             type="color"
@@ -91,7 +93,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
         transition={{ delay: 0.2, duration: 0.4 }}
       >
         <label className="mb-1 block text-lg text-dracula-foreground">
-          Texto da Flag:
+          {t("FlagCustomizer.flagText")} :
         </label>
         <input
           type="text"
@@ -106,7 +108,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           onPaste={(e) => e.preventDefault()}
           onCut={(e) => e.preventDefault()}
           className="w-full rounded border p-2 text-gray-900 shadow-lg focus:outline-none focus:ring-2 focus:ring-dracula-red"
-          placeholder="Digite o texto da bandeira"
+          placeholder={t("FlagCustomizer.placeholderFlagText")}
         />
       </motion.div>
 
@@ -117,7 +119,7 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
         transition={{ delay: 0.3, duration: 0.4 }}
       >
         <label className="mb-1 block text-lg text-dracula-foreground">
-          Formato da Imagem:
+          {t("FlagCustomizer.imageFormat")} :
         </label>
         <select
           name="shape"
@@ -125,8 +127,12 @@ function FlagCustomizer({ flagOptions, setFlagOptions }) {
           onChange={handleChange}
           className="w-full rounded border p-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-dracula-red"
         >
-          <option value="round">Redondo</option>
-          <option value="square">Quadrado</option>
+          <option value="round">
+            {t("FlagCustomizer.optionRound")}
+          </option>
+          <option value="square">
+            {t("FlagCustomizer.optionSquare")}
+          </option>
         </select>
       </motion.div>
     </motion.div>
